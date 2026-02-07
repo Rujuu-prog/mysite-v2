@@ -50,6 +50,7 @@ export function WorkModal({ work, onClose }: Props) {
   useEffect(() => {
     if (!work) return;
 
+    const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", handleKeyDown);
 
@@ -59,7 +60,7 @@ export function WorkModal({ work, onClose }: Props) {
     firstFocusable?.focus();
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = prevOverflow;
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [work, handleKeyDown]);
