@@ -78,7 +78,7 @@ export const works: Work[] = [
   {
     id: "work-7",
     title: "レンタルサロンのSPAサイト作成",
-    period: "2023.11 - 2023.12",
+    period: "2023.7 - 2023.9",
     description: "レンタルサロンのSPAサイトを作成",
     thumbnail: "/spa.png",
     tags: ["Next.js", "Vercel"],
@@ -93,7 +93,7 @@ export const works: Work[] = [
     thumbnail: "/default.png",
     tags: ["Laravel", "Vue.js", "jQuery", "Docker", "AWS", "MySQL", "Bitbucket", "Jira"],
     detail:
-        "注文確認画面、注文送信処理、商品検索画面、商品追加機能を担当しました。",
+      "注文確認画面、注文送信処理、商品検索画面、商品追加機能を担当しました。",
   },
   {
     id: "work-9",
@@ -102,9 +102,9 @@ export const works: Work[] = [
     description: "複数の社内システムの保守・運用",
     thumbnail: "/default.png",
     tags: ["Spring Boot", "Angular", "AWS", "Kubernetes", "Streamlit", "Wordpress", "Salesforce"],
-    github: "https://github.com",
     detail:
-        "MDX を活用したブログプラットフォーム。記事の執筆体験とパフォーマンスの両立を重視しています。",
+      "社内の複数システムの保守・運用を担当しています。\n" +
+      "既存機能の改修やDB移行、障害対応など幅広く対応しています。",
   },
   {
     id: "work-10",
