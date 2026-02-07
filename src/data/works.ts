@@ -6,22 +6,22 @@ export const works: Work[] = [
     title: "Portfolio Site",
     description:
       "ミニマルなポートフォリオサイト。Next.js + Tailwind CSS で構築。",
-    thumbnail: "/example.PNG",
+    thumbnail: "/portfolio.png",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    link: "https://example.com",
-    github: "https://github.com",
+    link: "https://rujuu.com",
+    github: "https://github.com/Rujuu-prog/mysite-v2",
     detail:
-      "スクロール連動アニメーションとレスポンシブ対応を重視したポートフォリオサイト。アトミックデザインで構築し、保守性を高めています。",
+      "少し遊び心のあるポートフォリオサイト。アトミックデザインで構築し、保守性を高めています。",
   },
   {
     id: "work-2",
-    title: "Task Management App",
-    description: "チーム向けタスク管理アプリ。リアルタイム同期対応。",
-    thumbnail: "/example.PNG",
-    tags: ["React", "Firebase", "Material UI"],
-    link: "https://example.com",
+    title: "商品登録作業自動化アプリ",
+    description: "ECサイトへの商品登録を自動化するWebアプリ",
+    thumbnail: "/rpa.png",
+    tags: ["Django", "さくらのVPS", "jQuery", "Pandas"],
     detail:
-      "Firestore のリアルタイムリスナーを活用し、チームメンバー間でのタスク状況をリアルタイムに共有できるアプリケーションです。",
+      "ECサイトに手動で商品を登録していて、定型作業で一日が終わっていました。" +
+        "そこで商品登録や、作業用のcsv整形等をPythonで自動化することで、定型作業ではなくクリエイティブなタスクに時間を使えるようになりました。",
   },
   {
     id: "work-3",

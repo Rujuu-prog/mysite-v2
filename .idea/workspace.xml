@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正">
+    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: ロード画面追加">
       <change afterPath="$PROJECT_DIR$/public/IMG_1636.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.claude/settings.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/.claude/settings.local.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/rpa.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/animations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/animations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/works.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/works.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770400005351</updated>
       <workItem from="1770400007182" duration="5260000" />
-      <workItem from="1770445234937" duration="18787000" />
+      <workItem from="1770445234937" duration="19815000" />
     </task>
     <task id="LOCAL-00001" summary=":tada: init commit">
       <option name="closed" value="true" />
@@ -183,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770463621288</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=":zap: ロード画面追加">
+      <option name="closed" value="true" />
+      <created>1770464721746</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1770464721746</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +201,8 @@
     <MESSAGE value=":zap: 見た目を整える" />
     <MESSAGE value=":zap: iconとアニメーション追加" />
     <MESSAGE value=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正" />
-    <option name="LAST_COMMIT_MESSAGE" value=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正" />
+    <MESSAGE value=":zap: ロード画面追加" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: ロード画面追加" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
