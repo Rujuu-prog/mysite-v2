@@ -8,7 +8,9 @@
       "Bash(npm run build:*)",
       "Bash(npm run lint)",
       "Bash(npx biome check:*)",
-      "mcp__sequential-thinking__sequentialthinking"
+      "mcp__sequential-thinking__sequentialthinking",
+      "mcp__serena__get_symbols_overview",
+      "mcp__serena__activate_project"
     ]
   }
 }

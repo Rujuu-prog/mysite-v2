@@ -4,19 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: モーダルで改行できるように修正">
+    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: Experienceの内容更新">
       <change afterPath="$PROJECT_DIR$/public/IMG_1636.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/default.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.claude/settings.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/.claude/settings.local.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DEVELOPMENT.md" beforeDir="false" afterPath="$PROJECT_DIR$/DEVELOPMENT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organisms/WorkModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/WorkModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/works.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/works.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/AboutSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/AboutSection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_D:/prog2/mysite-v2" value="39J2lnBmdJEo4RjIpI02GgtyTNY" />
+    </persistenceIdMap>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -150,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770400005351</updated>
       <workItem from="1770400007182" duration="5260000" />
-      <workItem from="1770445234937" duration="20837000" />
+      <workItem from="1770445234937" duration="34601000" />
     </task>
     <task id="LOCAL-00001" summary=":tada: init commit">
       <option name="closed" value="true" />
@@ -224,7 +227,47 @@
       <option name="project" value="LOCAL" />
       <updated>1770466377369</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary=":zap: worksで期間を表示できるように変更">
+      <option name="closed" value="true" />
+      <created>1770466698103</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1770466698103</updated>
+    </task>
+    <task id="LOCAL-00011" summary=":zap: worksに実績追加">
+      <option name="closed" value="true" />
+      <created>1770474642916</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1770474642916</updated>
+    </task>
+    <task id="LOCAL-00012" summary=":zap: site情報修正">
+      <option name="closed" value="true" />
+      <created>1770477696267</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1770477696267</updated>
+    </task>
+    <task id="LOCAL-00013" summary=":zap: aboutの内容更新">
+      <option name="closed" value="true" />
+      <created>1770478725110</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1770478725110</updated>
+    </task>
+    <task id="LOCAL-00014" summary=":zap: Experienceの内容更新">
+      <option name="closed" value="true" />
+      <created>1770480148885</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1770480148885</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +282,12 @@
     <MESSAGE value=":zap: worksに実際の情報追加" />
     <MESSAGE value=":bug: モーダルの表示位置修正" />
     <MESSAGE value=":zap: モーダルで改行できるように修正" />
-    <option name="LAST_COMMIT_MESSAGE" value=":zap: モーダルで改行できるように修正" />
+    <MESSAGE value=":zap: worksで期間を表示できるように変更" />
+    <MESSAGE value=":zap: worksに実績追加" />
+    <MESSAGE value=":zap: site情報修正" />
+    <MESSAGE value=":zap: aboutの内容更新" />
+    <MESSAGE value=":zap: Experienceの内容更新" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: Experienceの内容更新" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
