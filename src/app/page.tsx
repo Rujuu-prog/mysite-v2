@@ -1,65 +1,72 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "motion/react";
+import { useCallback, useEffect, useState } from "react";
+import { ScrollHint } from "@/components/atoms/ScrollHint";
+import { MainLayout } from "@/components/layouts/MainLayout";
+import { PageLoader } from "@/components/organisms/PageLoader";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { HomeSection } from "@/components/sections/HomeSection";
+import { WorksSection } from "@/components/sections/WorksSection";
+import { useScrollBackground } from "@/hooks/useScrollBackground";
+import { fadeIn } from "@/lib/animations";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasReachedBottom, setHasReachedBottom] = useState(false);
+  const [hasReachedContact, setHasReachedContact] = useState(false);
+  useScrollBackground();
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <PageLoader isLoading={isLoading} />
+      <ScrollHint isLoading={isLoading} />
+      <MainLayout isLoading={isLoading}>
+        <HomeSection hasReachedBottom={hasReachedBottom} />
+        <WorksSection />
+        <AboutSection />
+        <ExperienceSection />
+        <motion.p
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          onViewportEnter={() => setHasReachedBottom(true)}
+          className="py-16 text-center text-caption text-muted"
+        >
+          Hope you found something enjoyable.
+        </motion.p>
+        <ContactSection />
+        <motion.p
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          onViewportEnter={() => setHasReachedContact(true)}
+          className={`pb-12 pt-8 text-center text-caption transition-colors duration-500 ${
+            hasReachedContact ? "text-foreground" : "text-muted"
+          }`}
+        >
+          <button
+            type="button"
+            onClick={scrollToTop}
+            className="cursor-pointer transition-colors duration-200 hover:text-accent"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            Back to the beginning.
+          </button>
+        </motion.p>
+      </MainLayout>
+    </>
   );
 }

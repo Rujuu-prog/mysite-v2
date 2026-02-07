@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: worksの情報更新">
+      <change afterPath="$PROJECT_DIR$/public/IMG_1636.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organisms/PageLoader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/PageLoader.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_D:/prog2/mysite-v2" value="39J2lnBmdJEo4RjIpI02GgtyTNY" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Rujuu-prog"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Rujuu-prog/mysite-v2.git",
+    "accountId": "cfca2c32-c0cb-4915-8d72-0451728cfc57"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="39J2lnBmdJEo4RjIpI02GgtyTNY" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "feature/add-template",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "last_opened_file_path": "D:/prog2/mysite-v2/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "terminal",
+    "ts.external.directory.path": "D:\\prog2\\mysite-v2\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\prog2\mysite-v2\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\prog2\mysite-v2\public" />
+      <recent name="D:\prog2\mysite-v2\claude\order\init" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="Next.js: クライアントサイドのデバッグ" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="デフォルトタスク">
+      <changelist id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment="" />
+      <created>1770400005351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770400005351</updated>
+      <workItem from="1770400007182" duration="5260000" />
+      <workItem from="1770445234937" duration="35819000" />
+    </task>
+    <task id="LOCAL-00001" summary=":tada: init commit">
+      <option name="closed" value="true" />
+      <created>1770455642242</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1770455642242</updated>
+    </task>
+    <task id="LOCAL-00002" summary=":zap: 見た目を整える">
+      <option name="closed" value="true" />
+      <created>1770457013485</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770457013486</updated>
+    </task>
+    <task id="LOCAL-00003" summary=":zap: iconとアニメーション追加">
+      <option name="closed" value="true" />
+      <created>1770461425897</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1770461425897</updated>
+    </task>
+    <task id="LOCAL-00004" summary=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正">
+      <option name="closed" value="true" />
+      <created>1770463621288</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1770463621288</updated>
+    </task>
+    <task id="LOCAL-00005" summary=":zap: ロード画面追加">
+      <option name="closed" value="true" />
+      <created>1770464721746</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1770464721746</updated>
+    </task>
+    <task id="LOCAL-00006" summary=":zap: worksに実際の情報追加">
+      <option name="closed" value="true" />
+      <created>1770465832049</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1770465832049</updated>
+    </task>
+    <task id="LOCAL-00007" summary=":bug: モーダルの表示位置修正">
+      <option name="closed" value="true" />
+      <created>1770466221360</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1770466221360</updated>
+    </task>
+    <task id="LOCAL-00008" summary=":zap: モーダルで改行できるように修正">
+      <option name="closed" value="true" />
+      <created>1770466369627</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770466369627</updated>
+    </task>
+    <task id="LOCAL-00009" summary=":zap: モーダルで改行できるように修正">
+      <option name="closed" value="true" />
+      <created>1770466377367</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1770466377369</updated>
+    </task>
+    <task id="LOCAL-00010" summary=":zap: worksで期間を表示できるように変更">
+      <option name="closed" value="true" />
+      <created>1770466698103</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1770466698103</updated>
+    </task>
+    <task id="LOCAL-00011" summary=":zap: worksに実績追加">
+      <option name="closed" value="true" />
+      <created>1770474642916</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1770474642916</updated>
+    </task>
+    <task id="LOCAL-00012" summary=":zap: site情報修正">
+      <option name="closed" value="true" />
+      <created>1770477696267</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1770477696267</updated>
+    </task>
+    <task id="LOCAL-00013" summary=":zap: aboutの内容更新">
+      <option name="closed" value="true" />
+      <created>1770478725110</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1770478725110</updated>
+    </task>
+    <task id="LOCAL-00014" summary=":zap: Experienceの内容更新">
+      <option name="closed" value="true" />
+      <created>1770480148885</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1770480148885</updated>
+    </task>
+    <task id="LOCAL-00015" summary=":zap: philosophyの英文追加">
+      <option name="closed" value="true" />
+      <created>1770483027136</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1770483027136</updated>
+    </task>
+    <task id="LOCAL-00016" summary=":zap: worksの情報更新">
+      <option name="closed" value="true" />
+      <created>1770483509591</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1770483509591</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=":tada: init commit" />
+    <MESSAGE value=":zap: 見た目を整える" />
+    <MESSAGE value=":zap: iconとアニメーション追加" />
+    <MESSAGE value=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正" />
+    <MESSAGE value=":zap: ロード画面追加" />
+    <MESSAGE value=":zap: worksに実際の情報追加" />
+    <MESSAGE value=":bug: モーダルの表示位置修正" />
+    <MESSAGE value=":zap: モーダルで改行できるように修正" />
+    <MESSAGE value=":zap: worksで期間を表示できるように変更" />
+    <MESSAGE value=":zap: worksに実績追加" />
+    <MESSAGE value=":zap: site情報修正" />
+    <MESSAGE value=":zap: aboutの内容更新" />
+    <MESSAGE value=":zap: Experienceの内容更新" />
+    <MESSAGE value=":zap: philosophyの英文追加" />
+    <MESSAGE value=":zap: worksの情報更新" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: worksの情報更新" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
