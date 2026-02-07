@@ -112,7 +112,7 @@ export const works: Work[] = [
     description: "個人ブログサイト",
     thumbnail: "/blog.png",
     tags: ["Wordpress", "さくらのVPS"],
-    github: "https://blog.rujuu.com",
+    link: "https://blog.rujuu.com",
     detail:
         "備忘録や使って良かったアイテムなどを共有するためのブログサイトです。",
   },
