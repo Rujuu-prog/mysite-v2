@@ -2,7 +2,10 @@
 
 import { motion } from "motion/react";
 import { useCallback, useEffect, useState } from "react";
+import { OverscrollHint } from "@/components/atoms/OverscrollHint";
 import { ScrollHint } from "@/components/atoms/ScrollHint";
+import { ShootingStar } from "@/components/atoms/ShootingStar";
+import { StarfieldOverlay } from "@/components/atoms/StarfieldOverlay";
 import { MainLayout } from "@/components/layouts/MainLayout";
 import { PageLoader } from "@/components/organisms/PageLoader";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -10,6 +13,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { HomeSection } from "@/components/sections/HomeSection";
 import { WorksSection } from "@/components/sections/WorksSection";
+import { useOverscrollStars } from "@/hooks/useOverscrollStars";
 import { useScrollBackground } from "@/hooks/useScrollBackground";
 import { fadeIn } from "@/lib/animations";
 
@@ -18,6 +22,7 @@ export default function Home() {
   const [hasReachedBottom, setHasReachedBottom] = useState(false);
   const [hasReachedContact, setHasReachedContact] = useState(false);
   useScrollBackground();
+  useOverscrollStars(!isLoading);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 2500);
@@ -32,6 +37,9 @@ export default function Home() {
     <>
       <PageLoader isLoading={isLoading} />
       <ScrollHint isLoading={isLoading} />
+      <ShootingStar />
+      <OverscrollHint />
+      <StarfieldOverlay />
       <MainLayout isLoading={isLoading}>
         <HomeSection hasReachedBottom={hasReachedBottom} />
         <WorksSection />
@@ -45,7 +53,14 @@ export default function Home() {
           onViewportEnter={() => setHasReachedBottom(true)}
           className="py-16 text-center text-caption text-muted"
         >
-          Hope you found something enjoyable.
+          <span className="group relative inline-block cursor-default">
+            <span className="inline-block opacity-100 blur-none transition-[filter,opacity] duration-[800ms] ease-in-out group-hover:opacity-0 group-hover:blur-[8px]">
+              Hope you found something enjoyable.
+            </span>
+            <span className="absolute inset-0 flex items-center justify-center opacity-0 blur-[8px] transition-[filter,opacity] duration-[800ms] ease-in-out group-hover:opacity-100 group-hover:blur-none">
+              Did you notice the stars?
+            </span>
+          </span>
         </motion.p>
         <ContactSection />
         <motion.p
