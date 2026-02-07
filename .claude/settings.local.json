@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "mcp__serena__list_dir",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(npx biome check:*)"
+    ]
+  }
+}
