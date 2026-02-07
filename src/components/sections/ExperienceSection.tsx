@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { SectionHeading } from "@/components/atoms/SectionHeading";
 import { ExperienceItem } from "@/components/molecules/ExperienceItem";
 import { experiences } from "@/data/experience";
@@ -47,6 +47,12 @@ export function ExperienceSection() {
     },
     [],
   );
+
+  useEffect(() => {
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, []);
 
   return (
     <section id="experience" className="px-6 py-24 md:px-12">
