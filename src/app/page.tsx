@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { useCallback, useEffect, useState } from "react";
 import { ScrollHint } from "@/components/atoms/ScrollHint";
+import { ShootingStar } from "@/components/atoms/ShootingStar";
 import { MainLayout } from "@/components/layouts/MainLayout";
 import { PageLoader } from "@/components/organisms/PageLoader";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -32,6 +33,7 @@ export default function Home() {
     <>
       <PageLoader isLoading={isLoading} />
       <ScrollHint isLoading={isLoading} />
+      <ShootingStar />
       <MainLayout isLoading={isLoading}>
         <HomeSection hasReachedBottom={hasReachedBottom} />
         <WorksSection />
