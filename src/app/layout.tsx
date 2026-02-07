@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@/components/atoms/GoogleAnalytics";
+import "devicon/devicon.min.css";
 import "./globals.css";
 
 const inter = Inter({
@@ -41,12 +42,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-        />
-      </head>
       <body
         className={`${inter.className} antialiased`}
         suppressHydrationWarning
