@@ -52,4 +52,11 @@ export const works: Work[] = [
     detail:
       "MDX を活用したブログプラットフォーム。記事の執筆体験とパフォーマンスの両立を重視しています。",
   },
+  {
+    id: "work-6",
+    title: "In progress",
+    description: "",
+    thumbnail: "/example.PNG",
+    tags: [],
+  },
 ];

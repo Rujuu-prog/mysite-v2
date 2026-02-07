@@ -4,23 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":tada: init commit">
+    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: 見た目を整える">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/atoms/IconLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atoms/IconLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/atoms/SectionHeading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atoms/SectionHeading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/atoms/Tag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atoms/Tag.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/ContactItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/ContactItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atoms/SkillIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atoms/SkillIcon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/molecules/ExperienceItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/ExperienceItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/NavItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/NavItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/molecules/SkillCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/SkillCategory.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/molecules/WorkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/WorkCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organisms/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/Sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/ExperienceSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/ExperienceSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/HomeSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/HomeSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/animations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/animations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/WorksSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/WorksSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/site.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/site.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/skills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/skills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/works.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/works.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770400005351</updated>
       <workItem from="1770400007182" duration="5260000" />
-      <workItem from="1770445234937" duration="11567000" />
+      <workItem from="1770445234937" duration="15534000" />
     </task>
     <task id="LOCAL-00001" summary=":tada: init commit">
       <option name="closed" value="true" />
@@ -169,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770455642242</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=":zap: 見た目を整える">
+      <option name="closed" value="true" />
+      <created>1770457013485</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770457013486</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +186,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":tada: init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value=":tada: init commit" />
+    <MESSAGE value=":zap: 見た目を整える" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: 見た目を整える" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

@@ -26,7 +26,7 @@ export function WorksSection() {
           <WorkCard
             key={work.id}
             work={work}
-            onClick={() => setSelectedWork(work)}
+            onClick={() => work.detail && setSelectedWork(work)}
           />
         ))}
       </motion.div>

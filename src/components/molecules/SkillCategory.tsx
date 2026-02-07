@@ -17,7 +17,7 @@ export function SkillCategory({ category }: Props) {
       <div className="flex flex-wrap gap-2">
         {category.skills.map((skill) => (
           <span key={skill.name} className="flex items-center gap-1.5">
-            <SkillIcon name={skill.name} />
+            <SkillIcon name={skill.name} icon={skill.icon} />
             <Tag label={skill.name} />
           </span>
         ))}

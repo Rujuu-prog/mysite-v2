@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "Portfolio",
+  name: "rujuu.com",
   title: "Portfolio | Developer",
   description: "ものづくりを通して、できるだけ多くの人に良い影響を与えたい。",
   heroMessage: "人生に、楽しみを。",

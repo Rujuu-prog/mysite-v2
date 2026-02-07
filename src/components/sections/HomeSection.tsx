@@ -1,11 +1,23 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useAnimationControls } from "motion/react";
+import { useEffect, useRef } from "react";
 import { ScrollHint } from "@/components/atoms/ScrollHint";
 import { siteConfig } from "@/data/site";
 import { fadeIn, slideUp } from "@/lib/animations";
 
-export function HomeSection() {
+type Props = {
+  hasReachedBottom: boolean;
+};
+
+export function HomeSection({ hasReachedBottom }: Props) {
+  const controls = useAnimationControls();
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    controls.start("visible");
+  }, [controls]);
+
   return (
     <section
       id="home"
@@ -15,7 +27,17 @@ export function HomeSection() {
         <motion.h1
           variants={slideUp}
           initial="hidden"
-          animate="visible"
+          animate={controls}
+          onViewportEnter={() => {
+            if (hasReachedBottom && !hasAnimated.current) {
+              hasAnimated.current = true;
+              controls.start({
+                scale: [1, 1.02, 1],
+                opacity: [1, 0.85, 1],
+                transition: { duration: 0.6, ease: "easeInOut" },
+              });
+            }
+          }}
           className="text-foreground"
         >
           {siteConfig.heroMessage}

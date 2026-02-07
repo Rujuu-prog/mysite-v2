@@ -12,7 +12,7 @@ export type Work = {
   tags: string[];
   link?: string;
   github?: string;
-  detail: string;
+  detail?: string;
 };
 
 export type Experience = {
