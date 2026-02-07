@@ -1,5 +1,6 @@
 "use client";
 
+import { LayoutGroup } from "motion/react";
 import { IconLink } from "@/components/atoms/IconLink";
 import { NavItem } from "@/components/molecules/NavItem";
 import { navLinks } from "@/data/navigation";
@@ -17,15 +18,21 @@ export function Sidebar() {
         <p className="mb-8 text-sm font-semibold text-foreground">
           {siteConfig.name}
         </p>
-        <nav aria-label="Main navigation">
-          <ul className="space-y-1">
-            {navLinks.map((link) => (
-              <li key={link.id}>
-                <NavItem link={link} isActive={activeSection === link.id} />
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <LayoutGroup>
+          <nav aria-label="Main navigation">
+            <ul className="space-y-1">
+              {navLinks.map((link) => (
+                <li key={link.id}>
+                  <NavItem
+                    link={link}
+                    isActive={activeSection === link.id}
+                    enableLayoutAnimation
+                  />
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </LayoutGroup>
       </div>
       <div className="flex items-center gap-4">
         <IconLink href={siteConfig.socialLinks.github} label="GitHub">

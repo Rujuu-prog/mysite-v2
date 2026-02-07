@@ -26,6 +26,7 @@ export type Experience = {
 
 export type Skill = {
   name: string;
+  icon?: string;
 };
 
 export type SkillCategory = {

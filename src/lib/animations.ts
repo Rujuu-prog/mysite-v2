@@ -30,8 +30,35 @@ export const staggerContainer: Variants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.12,
     },
+  },
+};
+
+export const staggerContainerFast: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.06,
+    },
+  },
+};
+
+export const slideRight: Variants = {
+  hidden: { opacity: 0, x: 24 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
+export const numberReveal: Variants = {
+  hidden: { opacity: 0, x: -12 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.4, ease: "easeOut", delay: 0.3 },
   },
 };
 

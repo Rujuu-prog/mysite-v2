@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { ScrollHint } from "@/components/atoms/ScrollHint";
 import { siteConfig } from "@/data/site";
 import { fadeIn, slideUp } from "@/lib/animations";
 
@@ -24,11 +25,12 @@ export function HomeSection() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.2 }}
-          className="mt-4 text-lg text-muted"
+          className="mt-2 text-lg text-muted"
         >
           {siteConfig.heroSubMessage}
         </motion.p>
       </motion.div>
+      <ScrollHint />
     </section>
   );
 }

@@ -17,8 +17,8 @@ export function ExperienceSection() {
         viewport={{ once: true, margin: "-80px" }}
         className="max-w-xl"
       >
-        {experiences.map((exp) => (
-          <ExperienceItem key={exp.id} experience={exp} />
+        {experiences.map((exp, index) => (
+          <ExperienceItem key={exp.id} experience={exp} index={index} />
         ))}
       </motion.div>
     </section>

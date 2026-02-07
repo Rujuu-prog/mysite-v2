@@ -19,7 +19,7 @@ export function WorkCard({ work, onClick }: Props) {
       onClick={onClick}
       className="group w-full cursor-pointer text-left"
     >
-      <div className="overflow-hidden rounded border border-border">
+      <div className="overflow-hidden rounded border border-border transition-colors duration-200 group-hover:border-accent">
         <Image
           src={work.thumbnail}
           alt={work.title}
@@ -38,6 +38,9 @@ export function WorkCard({ work, onClick }: Props) {
             <Tag key={tag} label={tag} />
           ))}
         </div>
+        <span className="mt-2 inline-block text-caption text-accent-strong opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+          View details →
+        </span>
       </div>
     </motion.button>
   );
