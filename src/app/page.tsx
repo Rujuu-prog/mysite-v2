@@ -47,7 +47,14 @@ export default function Home() {
           onViewportEnter={() => setHasReachedBottom(true)}
           className="py-16 text-center text-caption text-muted"
         >
-          Hope you found something enjoyable.
+          <span className="group relative inline-block cursor-default">
+            <span className="inline-block opacity-100 blur-none transition-[filter,opacity] duration-[800ms] ease-in-out group-hover:opacity-0 group-hover:blur-[8px]">
+              Hope you found something enjoyable.
+            </span>
+            <span className="absolute inset-0 flex items-center justify-center opacity-0 blur-[8px] transition-[filter,opacity] duration-[800ms] ease-in-out group-hover:opacity-100 group-hover:blur-none">
+              Did you notice the stars?
+            </span>
+          </span>
         </motion.p>
         <ContactSection />
         <motion.p
