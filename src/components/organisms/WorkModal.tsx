@@ -2,7 +2,8 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Button } from "@/components/atoms/Button";
 import { Tag } from "@/components/atoms/Tag";
 import { scaleIn } from "@/lib/animations";
@@ -14,6 +15,7 @@ type Props = {
 };
 
 export function WorkModal({ work, onClose }: Props) {
+  const [mounted, setMounted] = useState(false);
   const dialogRef = useRef<HTMLDivElement>(null);
 
   const handleKeyDown = useCallback(
@@ -42,6 +44,10 @@ export function WorkModal({ work, onClose }: Props) {
   );
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
     if (!work) return;
 
     document.body.style.overflow = "hidden";
@@ -58,7 +64,9 @@ export function WorkModal({ work, onClose }: Props) {
     };
   }, [work, handleKeyDown]);
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {work && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -139,6 +147,7 @@ export function WorkModal({ work, onClose }: Props) {
           </motion.div>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }
