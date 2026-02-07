@@ -121,7 +121,7 @@ export const works: Work[] = [
     title: "OBS配信サポートシステム",
     period: "2025.11 - ",
     description: "配信のコメントをリアルタイムで収集し、配信画面へ情報を表示するシステム",
-    thumbnail: "/default.png",
+    thumbnail: "/obs_dash.png",
     tags: ["Django", "Next.js", "Docker", "PostgreSQL", "Prometheus"],
     detail:
         "作成途中...",
