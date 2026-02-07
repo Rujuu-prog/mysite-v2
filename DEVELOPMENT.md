@@ -14,9 +14,10 @@ export const works: Work[] = [
     description: "カード上に表示される短い説明",
     thumbnail: "/image.png",       // public/ 直下に配置
     tags: ["Next.js", "TypeScript"],
-    link: "https://example.com",   // 省略可
+    link: "https://example.com",      // 省略可
     github: "https://github.com/...", // 省略可
-    detail: "モーダルに表示される詳細説明",
+    detail: "モーダルに表示される詳細説明", // 省略可
+    period: "2024.01 - 2024.06",      // 省略可
   },
 ];
 ```

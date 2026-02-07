@@ -4,6 +4,7 @@ export const works: Work[] = [
   {
     id: "work-1",
     title: "Portfolio Site",
+    period: "2026.02 - 2026.02",
     description:
       "ミニマルなポートフォリオサイト。Next.js + Tailwind CSS で構築。",
     thumbnail: "/portfolio.png",

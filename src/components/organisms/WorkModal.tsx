@@ -121,6 +121,9 @@ export function WorkModal({ work, onClose }: Props) {
             />
 
             <h3 className="mt-4 text-foreground">{work.title}</h3>
+            {work.period && (
+              <p className="mt-1 text-caption text-muted">{work.period}</p>
+            )}
 
             <div className="mt-2 flex flex-wrap gap-1.5">
               {work.tags.map((tag) => (

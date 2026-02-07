@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: ロード画面追加">
+    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: モーダルで改行できるように修正">
       <change afterPath="$PROJECT_DIR$/public/IMG_1636.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/portfolio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/rpa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/default.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DEVELOPMENT.md" beforeDir="false" afterPath="$PROJECT_DIR$/DEVELOPMENT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organisms/WorkModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/WorkModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/works.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/works.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +150,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770400005351</updated>
       <workItem from="1770400007182" duration="5260000" />
-      <workItem from="1770445234937" duration="19815000" />
+      <workItem from="1770445234937" duration="20837000" />
     </task>
     <task id="LOCAL-00001" summary=":tada: init commit">
       <option name="closed" value="true" />
@@ -190,7 +192,39 @@
       <option name="project" value="LOCAL" />
       <updated>1770464721746</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=":zap: worksに実際の情報追加">
+      <option name="closed" value="true" />
+      <created>1770465832049</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1770465832049</updated>
+    </task>
+    <task id="LOCAL-00007" summary=":bug: モーダルの表示位置修正">
+      <option name="closed" value="true" />
+      <created>1770466221360</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1770466221360</updated>
+    </task>
+    <task id="LOCAL-00008" summary=":zap: モーダルで改行できるように修正">
+      <option name="closed" value="true" />
+      <created>1770466369627</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770466369627</updated>
+    </task>
+    <task id="LOCAL-00009" summary=":zap: モーダルで改行できるように修正">
+      <option name="closed" value="true" />
+      <created>1770466377367</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1770466377369</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +236,10 @@
     <MESSAGE value=":zap: iconとアニメーション追加" />
     <MESSAGE value=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正" />
     <MESSAGE value=":zap: ロード画面追加" />
-    <option name="LAST_COMMIT_MESSAGE" value=":zap: ロード画面追加" />
+    <MESSAGE value=":zap: worksに実際の情報追加" />
+    <MESSAGE value=":bug: モーダルの表示位置修正" />
+    <MESSAGE value=":zap: モーダルで改行できるように修正" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: モーダルで改行できるように修正" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

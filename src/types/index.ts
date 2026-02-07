@@ -13,6 +13,7 @@ export type Work = {
   link?: string;
   github?: string;
   detail?: string;
+  period?: string;
 };
 
 export type Experience = {

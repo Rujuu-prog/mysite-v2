@@ -37,6 +37,9 @@ export function WorkCard({ work, onClick }: Props) {
           >
             {work.title}
           </h3>
+          {work.period && (
+            <p className="mt-0.5 text-caption text-muted">{work.period}</p>
+          )}
           {work.description && (
             <p className="mt-1 text-caption text-muted">{work.description}</p>
           )}
