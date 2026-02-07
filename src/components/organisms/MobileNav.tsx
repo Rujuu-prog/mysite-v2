@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { IconLink } from "@/components/atoms/IconLink";
 import { NavItem } from "@/components/molecules/NavItem";
 import { navLinks } from "@/data/navigation";
@@ -19,7 +19,16 @@ export function MobileNav({ isLoading = false }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const activeSection = useActiveSection(sectionIds);
 
-  const close = () => setIsOpen(false);
+  const close = useCallback(() => setIsOpen(false), []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, close]);
 
   return (
     <div className="lg:hidden">
@@ -76,7 +85,6 @@ export function MobileNav({ isLoading = false }: MobileNavProps) {
               transition={{ duration: 0.2 }}
               className="fixed inset-0 z-40 bg-black/50"
               onClick={close}
-              onKeyDown={(e) => e.key === "Escape" && close()}
             />
             <motion.nav
               initial={{ x: "-100%" }}
