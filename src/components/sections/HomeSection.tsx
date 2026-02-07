@@ -2,7 +2,7 @@
 
 import { motion, useAnimationControls } from "motion/react";
 import { useEffect, useRef } from "react";
-import { ScrollHint } from "@/components/atoms/ScrollHint";
+
 import { siteConfig } from "@/data/site";
 import { fadeIn, slideUp } from "@/lib/animations";
 
@@ -52,7 +52,6 @@ export function HomeSection({ hasReachedBottom }: Props) {
           {siteConfig.heroSubMessage}
         </motion.p>
       </motion.div>
-      <ScrollHint />
     </section>
   );
 }

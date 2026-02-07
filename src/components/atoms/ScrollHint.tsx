@@ -3,7 +3,11 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
-export function ScrollHint() {
+type Props = {
+  isLoading?: boolean;
+};
+
+export function ScrollHint({ isLoading = false }: Props) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -16,7 +20,7 @@ export function ScrollHint() {
 
   return (
     <AnimatePresence>
-      {visible && (
+      {visible && !isLoading && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
