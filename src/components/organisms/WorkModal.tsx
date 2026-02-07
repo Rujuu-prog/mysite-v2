@@ -128,7 +128,7 @@ export function WorkModal({ work, onClose }: Props) {
               ))}
             </div>
 
-            <p className="mt-4 text-sm leading-relaxed text-muted">
+            <p className="mt-4 whitespace-pre-wrap text-sm leading-relaxed text-muted">
               {work.detail}
             </p>
 
