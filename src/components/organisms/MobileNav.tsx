@@ -7,10 +7,15 @@ import { NavItem } from "@/components/molecules/NavItem";
 import { navLinks } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import { blurReveal } from "@/lib/animations";
+
+type MobileNavProps = {
+  isLoading?: boolean;
+};
 
 const sectionIds = navLinks.map((l) => l.id);
 
-export function MobileNav() {
+export function MobileNav({ isLoading = false }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const activeSection = useActiveSection(sectionIds);
 
@@ -18,7 +23,12 @@ export function MobileNav() {
 
   return (
     <div className="lg:hidden">
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-border bg-background px-4 py-3">
+      <motion.header
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-border bg-background px-4 py-3"
+        variants={blurReveal}
+        initial="hidden"
+        animate={isLoading ? "hidden" : "visible"}
+      >
         <p className="text-sm font-semibold text-foreground">
           {siteConfig.name}
         </p>
@@ -54,7 +64,7 @@ export function MobileNav() {
             )}
           </svg>
         </button>
-      </header>
+      </motion.header>
 
       <AnimatePresence>
         {isOpen && (

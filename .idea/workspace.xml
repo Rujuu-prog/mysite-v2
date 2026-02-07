@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: iconとアニメーション追加">
+    <list default="true" id="a08e240b-dbff-4e90-a3ae-c918a9c9b3ba" name="変更" comment=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正">
       <change afterPath="$PROJECT_DIR$/public/IMG_1636.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.claude/settings.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/.claude/settings.local.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/atoms/SectionHeading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atoms/SectionHeading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/ContactItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/ContactItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/WorkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/WorkCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/animations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/animations.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
     "settings.editor.selected.configurable": "terminal",
-    "ts.external.directory.path": "C:\\Users\\Rujuu\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "D:\\prog2\\mysite-v2\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -150,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770400005351</updated>
       <workItem from="1770400007182" duration="5260000" />
-      <workItem from="1770445234937" duration="17725000" />
+      <workItem from="1770445234937" duration="18787000" />
     </task>
     <task id="LOCAL-00001" summary=":tada: init commit">
       <option name="closed" value="true" />
@@ -176,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770461425897</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正">
+      <option name="closed" value="true" />
+      <created>1770463621288</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1770463621288</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +193,8 @@
     <MESSAGE value=":tada: init commit" />
     <MESSAGE value=":zap: 見た目を整える" />
     <MESSAGE value=":zap: iconとアニメーション追加" />
-    <option name="LAST_COMMIT_MESSAGE" value=":zap: iconとアニメーション追加" />
+    <MESSAGE value=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: topへ戻るリンクを追加し、cursorを使い分けるように修正" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

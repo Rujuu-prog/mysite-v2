@@ -75,3 +75,24 @@ export const scaleIn: Variants = {
     transition: { duration: 0.2, ease: "easeIn" },
   },
 };
+
+export const loaderText: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: [0, 1, 1, 0],
+    transition: {
+      duration: 2.5,
+      times: [0, 0.32, 0.64, 1],
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const blurReveal: Variants = {
+  hidden: { opacity: 0, filter: "blur(10px)" },
+  visible: {
+    opacity: 1,
+    filter: "blur(0px)",
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};

@@ -1,19 +1,29 @@
 "use client";
 
-import { LayoutGroup } from "motion/react";
+import { LayoutGroup, motion } from "motion/react";
 import { IconLink } from "@/components/atoms/IconLink";
 import { NavItem } from "@/components/molecules/NavItem";
 import { navLinks } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import { blurReveal } from "@/lib/animations";
+
+type SidebarProps = {
+  isLoading?: boolean;
+};
 
 const sectionIds = navLinks.map((l) => l.id);
 
-export function Sidebar() {
+export function Sidebar({ isLoading = false }: SidebarProps) {
   const activeSection = useActiveSection(sectionIds);
 
   return (
-    <aside className="fixed left-0 top-0 hidden h-screen w-60 flex-col justify-between border-r border-border bg-background p-6 lg:flex">
+    <motion.aside
+      className="fixed left-0 top-0 hidden h-screen w-60 flex-col justify-between border-r border-border bg-background p-6 lg:flex"
+      variants={blurReveal}
+      initial="hidden"
+      animate={isLoading ? "hidden" : "visible"}
+    >
       <div>
         <p className="mb-8 text-sm font-semibold text-foreground">
           {siteConfig.name}
@@ -76,6 +86,6 @@ export function Sidebar() {
           </svg>
         </IconLink>
       </div>
-    </aside>
+    </motion.aside>
   );
 }
