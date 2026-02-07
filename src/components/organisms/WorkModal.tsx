@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Button } from "@/components/atoms/Button";
 import { Tag } from "@/components/atoms/Tag";
+import { TwinklingStar } from "@/components/atoms/TwinklingStar";
 import { scaleIn } from "@/lib/animations";
 import type { Work } from "@/types";
 
@@ -88,13 +89,14 @@ export function WorkModal({ work, onClose }: Props) {
             role="dialog"
             aria-modal="true"
             aria-label={work.title}
-            className="relative z-10 max-h-[85vh] w-full max-w-xl overflow-y-auto rounded border border-border bg-background p-6"
+            className="relative z-10 max-h-[85vh] w-full max-w-xl overflow-hidden rounded border border-border bg-background"
           >
+            <TwinklingStar />
             <button
               type="button"
               onClick={onClose}
               aria-label="Close"
-              className="absolute top-4 right-4 text-muted transition-colors hover:text-foreground"
+              className="absolute top-4 right-4 z-10 text-muted transition-colors hover:text-foreground"
             >
               <svg
                 aria-hidden="true"
@@ -112,41 +114,42 @@ export function WorkModal({ work, onClose }: Props) {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
+            <div className="relative z-[1] max-h-[85vh] overflow-y-auto p-6">
+              <Image
+                src={work.thumbnail}
+                alt={work.title}
+                width={600}
+                height={400}
+                className="aspect-[3/2] w-full rounded object-cover"
+              />
 
-            <Image
-              src={work.thumbnail}
-              alt={work.title}
-              width={600}
-              height={400}
-              className="aspect-[3/2] w-full rounded object-cover"
-            />
-
-            <h3 className="mt-4 text-foreground">{work.title}</h3>
-            {work.period && (
-              <p className="mt-1 text-caption text-muted">{work.period}</p>
-            )}
-
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {work.tags.map((tag) => (
-                <Tag key={tag} label={tag} />
-              ))}
-            </div>
-
-            <p className="mt-4 whitespace-pre-wrap text-sm leading-relaxed text-muted">
-              {work.detail}
-            </p>
-
-            <div className="mt-6 flex gap-3">
-              {work.link && (
-                <Button href={work.link} variant="primary" external>
-                  Visit Site
-                </Button>
+              <h3 className="mt-4 text-foreground">{work.title}</h3>
+              {work.period && (
+                <p className="mt-1 text-caption text-muted">{work.period}</p>
               )}
-              {work.github && (
-                <Button href={work.github} variant="secondary" external>
-                  GitHub
-                </Button>
-              )}
+
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {work.tags.map((tag) => (
+                  <Tag key={tag} label={tag} />
+                ))}
+              </div>
+
+              <p className="mt-4 whitespace-pre-wrap text-sm leading-relaxed text-muted">
+                {work.detail}
+              </p>
+
+              <div className="mt-6 flex gap-3">
+                {work.link && (
+                  <Button href={work.link} variant="primary" external>
+                    Visit Site
+                  </Button>
+                )}
+                {work.github && (
+                  <Button href={work.github} variant="secondary" external>
+                    GitHub
+                  </Button>
+                )}
+              </div>
             </div>
           </motion.div>
         </div>
