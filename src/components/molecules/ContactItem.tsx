@@ -14,7 +14,7 @@ export function ContactItem({ href, icon, label }: Props) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 text-muted transition-colors duration-200 hover:text-accent"
+      className="flex cursor-alias items-center gap-3 text-muted transition-colors duration-200 hover:text-accent"
       whileHover={{ x: 4 }}
       transition={{ duration: 0.2 }}
     >

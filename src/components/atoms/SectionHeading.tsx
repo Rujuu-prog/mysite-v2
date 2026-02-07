@@ -2,6 +2,7 @@
 
 import type { Variants } from "motion/react";
 import { motion } from "motion/react";
+import { useMousePosition } from "@/hooks/useMousePosition";
 
 type Props = {
   children: string;
@@ -18,6 +19,11 @@ const charVariants: Variants = {
 
 export function SectionHeading({ children }: Props) {
   const chars = children.split("");
+  const { x, y } = useMousePosition();
+
+  const shadowX = x * 1;
+  const shadowY = y * 1;
+  const textShadow = `${shadowX}px ${shadowY}px 2px rgba(230, 22, 69, 0.06)`;
 
   return (
     <motion.h2
@@ -32,7 +38,10 @@ export function SectionHeading({ children }: Props) {
           custom={i}
           variants={charVariants}
           className="inline-block"
-          style={char === " " ? { width: "0.25em" } : undefined}
+          style={{
+            ...(char === " " ? { width: "0.25em" } : undefined),
+            textShadow,
+          }}
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>

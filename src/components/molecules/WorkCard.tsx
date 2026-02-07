@@ -19,7 +19,7 @@ export function WorkCard({ work, onClick }: Props) {
       <button
         type="button"
         onClick={hasDetail ? onClick : undefined}
-        className={`group w-full text-left ${hasDetail ? "cursor-pointer" : "cursor-default"}`}
+        className={`group w-full text-left ${hasDetail ? "cursor-zoom-in" : "cursor-help"}`}
         disabled={!hasDetail}
       >
         <div className="overflow-hidden rounded border border-border transition-colors duration-200 group-hover:border-accent">
@@ -48,7 +48,7 @@ export function WorkCard({ work, onClick }: Props) {
             </div>
           )}
           {hasDetail && (
-            <span className="mt-2 inline-block text-caption text-accent-strong opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+            <span className="mt-2 inline-block cursor-e-resize text-caption text-accent-strong opacity-0 transition-opacity duration-200 group-hover:opacity-100">
               View details →
             </span>
           )}
