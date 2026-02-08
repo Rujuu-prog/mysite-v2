@@ -17,8 +17,8 @@ export function AboutSection() {
 
   return (
     <section id="about">
-      <div ref={scrollTrackRef} className="h-[200vh]">
-        <div className="sticky top-0 flex h-screen flex-col justify-center px-6 md:px-12">
+      <div ref={scrollTrackRef} className="md:h-[200vh]">
+        <div className="flex flex-col px-6 py-24 md:sticky md:top-0 md:h-screen md:justify-center md:px-12 md:py-0">
           <SectionHeading>About</SectionHeading>
 
           <PhilosophyText scrollYProgress={scrollYProgress} />
