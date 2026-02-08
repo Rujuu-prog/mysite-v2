@@ -34,27 +34,22 @@ export function AboutSection() {
 
   return (
     <section id="about">
-      <div ref={scrollTrackRef} className="h-[140vh] md:h-[200vh]">
-        <div className="sticky top-0 z-10 grid h-screen grid-rows-[1fr_auto_1fr] px-6 md:px-12">
-          {/* Row 1: 上部スペーサー */}
-          <div />
+      <div ref={scrollTrackRef} className="h-[200vh]">
+        <div className="sticky top-0 z-10 h-screen px-6 pt-[15vh] md:grid md:grid-rows-[1fr_auto_1fr] md:px-12 md:pt-0">
+          {/* Desktop: grid row 1 spacer */}
+          <div className="hidden md:block" />
 
-          {/* Row 2: 中央配置されるPhilosophyコンテンツ */}
-          <div className="row-start-2">
+          {/* Main content */}
+          <div>
             <SectionHeading>About</SectionHeading>
             <PhilosophyText scrollYProgress={scrollYProgress} />
-            <div className="mt-8 hidden md:block">{skillsContent}</div>
-          </div>
-
-          {/* Row 3: モバイルSkills（h-screenから下にオーバーフロー、stickyと一緒に移動） */}
-          <div className="row-start-3 mt-8 self-start md:hidden">
-            {skillsContent}
+            <div className="mt-8">{skillsContent}</div>
           </div>
         </div>
       </div>
 
-      {/* モバイルSkillsオーバーフロー + セクション間余白 */}
-      <div className="h-[400px] md:hidden" aria-hidden="true" />
+      {/* モバイルSkillsオーバーフロー分の余白 */}
+      <div className="h-[580px] md:hidden" aria-hidden="true" />
     </section>
   );
 }
