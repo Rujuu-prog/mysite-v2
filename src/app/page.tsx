@@ -24,7 +24,7 @@ export default function Home() {
   const [hasReachedContact, setHasReachedContact] = useState(false);
   const [isMessageRevealed, setIsMessageRevealed] = useState(false);
   const isMobile = useMediaQuery("(max-width: 767px)");
-  const revealTimerRef = useRef<ReturnType<typeof setTimeout>>(null);
+  const revealTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useScrollBackground();
   useOverscrollStars(!isLoading);
 
@@ -63,6 +63,7 @@ export default function Home() {
           onViewportEnter={() => {
             setHasReachedBottom(true);
             if (isMobile) {
+              if (revealTimerRef.current) clearTimeout(revealTimerRef.current);
               revealTimerRef.current = setTimeout(
                 () => setIsMessageRevealed(true),
                 3000,
