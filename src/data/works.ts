@@ -12,7 +12,9 @@ export const works: Work[] = [
     link: "https://rujuu.com",
     github: "https://github.com/Rujuu-prog/mysite-v2",
     detail:
-      "少し遊び心のあるポートフォリオサイト。アトミックデザインで構築し、保守性を高めています。",
+      "ミニマルさを軸に設計したポートフォリオサイト。\n" +
+      "星空モチーフの演出で、ささやかな遊び心を加えました。\n" +
+      "情報の読みやすさと、触っていて心地よい体験の両立を意識しています。",
   },
   {
     id: "work-2",
@@ -22,8 +24,8 @@ export const works: Work[] = [
     thumbnail: "/rpa.png",
     tags: ["Django", "さくらのVPS", "jQuery", "Pandas", "Docker", "PostgreSQL", "GitHub Actions"],
     detail:
-      "ECサイトに手動で商品を登録していて、定型作業で一日が終わっていました。\n" +
-        "そこで商品登録や、作業用のcsv整形等をPythonで自動化することで、定型作業ではなくクリエイティブなタスクに時間を使えるようになりました。\n" +
+      "これまでECサイトに手動で商品を登録しており、定型作業で一日が終わっていました。\n" +
+        "そこで商品登録や、作業用のcsv整形等をPythonで自動化することで、定型作業ではなくクリエイティブなタスクに時間を使えるようになりました。\n\n" +
         "こだわりポイントは、ユーザーの待機時間をなるべく短くするためにdaskやCeleryで並列処理を行った点です。\n" +
         "また、ChatWorkのAPIを使用することで、処理完了を通知するなど既存の業務システムとの連携も意識しました。",
   },
@@ -56,17 +58,20 @@ export const works: Work[] = [
   {
     id: "work-5",
     title: "markdown2notion",
+    period: "2023.05 - Present",
     description: "NotionのDBにmarkdownファイルを変換するnpmライブラリ",
     thumbnail: "/markdown2notion.png",
     tags: ["TypeScript", "npm", "Docker"],
     link: "https://www.npmjs.com/package/markdown2notion",
     github: "https://github.com/Rujuu-prog/markdown2notion",
     detail:
-      "フォルダの階層構造をTagとして表現して、MDファイルをNotionのDBに登録できるnpmライブラリ。",
+      "フォルダの階層構造をTagとして表現して、MDファイルをNotionのDBに登録できるnpmライブラリ。\n" +
+      "GitHub上でフォルダ形式で管理しているドキュメントを、Notionで公開したいというニーズに応えるために作成しました。",
   },
   {
     id: "work-6",
     title: "wareki-tool-kit",
+    period: "2023.05 - Present",
     description: "和暦と西暦を操作するnpmライブラリ",
     thumbnail: "/wareki-tool-kit.png",
     tags: ["TypeScript", "npm", "Docker"],
