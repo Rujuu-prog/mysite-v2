@@ -10,6 +10,6 @@ export const siteConfig: SiteConfig = {
     github: "https://github.com/Rujuu-prog",
     x: "https://x.com/Rujuu_nu",
     blog: "https://blog.rujuu.com",
-    email: "mailto:rujuu@rujuu.com",
+    email: "mailto:contact@rujuu.com",
   },
 };
