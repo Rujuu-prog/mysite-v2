@@ -123,6 +123,42 @@ export const works: Work[] = [
   },
   {
     id: "work-11",
+    title: "GitHub Contribution Gravity Lens",
+    period: "2026.02 - ",
+    description: "GitHubのContribution Graphをゆがめて、READMEの見た目を良くするプロジェクト",
+    thumbnail: "/gravity-lens.png",
+    tags: ["TypeScript", "npm", "GitHub Actions"],
+    link: "https://github.com/Rujuu-prog/github-contribution-gravity-lens",
+    detail:
+      "GitHubのContribution Graphをゆがめて、READMEの見た目を良くするプロジェクトです。\n" +
+      "GitHub ActionsのMarketplaceとNPMライブラリの両方で公開しています。\n",
+  },
+  {
+    id: "work-12",
+    title: "GitHub Contribution Gravity Lens site",
+    period: "2026.02 - ",
+    description: "GitHub Contribution Gravity Lensをブラウザ上で試せるサイト",
+    thumbnail: "/gravity-lens-site.png",
+    tags: ["Next.js", "TypeScript", "GitHub Actions"],
+    link: "https://gravity-lens.rujuu.com/",
+    github: "https://github.com/Rujuu-prog/github-contribution-gravity-lens-web",
+    detail:
+      "GitHub Contribution Gravity Lensをブラウザ上で気軽に試せるサイトです。"
+  },
+  {
+    id: "work-13",
+    title: "QuakeOverlay",
+    period: "2026.03 - ",
+    description: "地震情報を配信で表示するツール",
+    thumbnail: "/quake-overlay.png",
+    tags: ["Electron", "React"],
+    link: "https://quake-overlay.rujuu.com/",
+    detail:
+      "地震情報を配信で表示するツールです。\n" +
+      "地震速報をリアルタイムで取得し、配信画面に表示することで、視聴者に迅速な情報提供を可能にします。",
+  },
+  {
+    id: "work-14",
     title: "OBS配信サポートシステム",
     period: "2025.11 - ",
     description: "配信のコメントをリアルタイムで収集し、配信画面へ情報を表示するシステム",
@@ -132,7 +168,7 @@ export const works: Work[] = [
         "作成途中...",
   },
   {
-    id: "work-12",
+    id: "work-15",
     title: "In progress",
     description: "",
     thumbnail: "/inprogress.png",
