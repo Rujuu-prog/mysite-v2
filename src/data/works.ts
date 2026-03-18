@@ -147,6 +147,18 @@ export const works: Work[] = [
   },
   {
     id: "work-13",
+    title: "QuakeOverlay",
+    period: "2026.03 - ",
+    description: "地震情報を配信で表示するツール",
+    thumbnail: "/quake-overlay.png",
+    tags: ["Electron", "React"],
+    link: "https://quake-overlay.rujuu.com/",
+    detail:
+      "地震情報を配信で表示するツールです。\n" +
+      "地震速報をリアルタイムで取得し、配信画面に表示することで、視聴者に迅速な情報提供を可能にします。",
+  },
+  {
+    id: "work-14",
     title: "OBS配信サポートシステム",
     period: "2025.11 - ",
     description: "配信のコメントをリアルタイムで収集し、配信画面へ情報を表示するシステム",
@@ -156,7 +168,7 @@ export const works: Work[] = [
         "作成途中...",
   },
   {
-    id: "work-14",
+    id: "work-15",
     title: "In progress",
     description: "",
     thumbnail: "/inprogress.png",
