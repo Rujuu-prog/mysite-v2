@@ -123,6 +123,18 @@ export const works: Work[] = [
   },
   {
     id: "work-11",
+    title: "GitHub Contribution Gravity Lens",
+    period: "2026.02 - ",
+    description: "GitHubのContribution Graphをゆがめて、READMEの見た目を良くするプロジェクト",
+    thumbnail: "/gravity-lens.png",
+    tags: ["TypeScript", "npm", "GitHub Actions"],
+    link: "https://github.com/Rujuu-prog/github-contribution-gravity-lens",
+    detail:
+      "GitHubのContribution Graphをゆがめて、READMEの見た目を良くするプロジェクトです。\n" +
+      "GitHub ActionsのMarketplaceとNPMライブラリの両方で公開しています。\n",
+  },
+  {
+    id: "work-12",
     title: "OBS配信サポートシステム",
     period: "2025.11 - ",
     description: "配信のコメントをリアルタイムで収集し、配信画面へ情報を表示するシステム",
@@ -132,7 +144,7 @@ export const works: Work[] = [
         "作成途中...",
   },
   {
-    id: "work-12",
+    id: "work-13",
     title: "In progress",
     description: "",
     thumbnail: "/inprogress.png",
