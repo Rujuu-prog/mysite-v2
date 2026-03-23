@@ -50,6 +50,7 @@ export default function RootLayout({
         className={`${inter.className} antialiased`}
         suppressHydrationWarning
       >
+        <GoogleAdSense />
         <GoogleAnalytics />
         {children}
       </body>
