@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAdSense } from "@/components/atoms/GoogleAdSense";
 import { GoogleAnalytics } from "@/components/atoms/GoogleAnalytics";
 import "devicon/devicon.min.css";
 import "./globals.css";
@@ -46,6 +47,7 @@ export default function RootLayout({
         className={`${inter.className} antialiased`}
         suppressHydrationWarning
       >
+        <GoogleAdSense />
         <GoogleAnalytics />
         {children}
       </body>
