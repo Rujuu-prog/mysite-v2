@@ -43,11 +43,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <GoogleAdSense />
+      </head>
       <body
         className={`${inter.className} antialiased`}
         suppressHydrationWarning
       >
-        <GoogleAdSense />
         <GoogleAnalytics />
         {children}
       </body>
