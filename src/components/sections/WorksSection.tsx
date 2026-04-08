@@ -104,7 +104,7 @@ export function WorksSection() {
       </div>
 
       {/* Active filter pills */}
-      {(selectedTags.length > 0 || searchQuery) && (
+      {selectedTags.length > 0 && (
         <div className="mb-6 flex flex-wrap items-center gap-2">
           {selectedTags.map((tag) => (
             <span
@@ -122,8 +122,7 @@ export function WorksSection() {
               </button>
             </span>
           ))}
-          {(selectedTags.length > 1 ||
-            (selectedTags.length > 0 && searchQuery)) && (
+          {selectedTags.length > 1 && (
             <button
               type="button"
               onClick={clearAll}

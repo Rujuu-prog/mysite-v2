@@ -153,7 +153,7 @@ export function TagFilterPopover({
                     <label
                       key={tag}
                       htmlFor={id}
-                      className={`flex w-full cursor-pointer items-center justify-between rounded px-2 py-1.5 text-sm transition-colors duration-100 ${
+                      className={`flex w-full cursor-pointer items-center justify-between rounded px-2 py-1.5 text-sm transition-colors duration-100 has-[:focus-visible]:ring-1 has-[:focus-visible]:ring-accent ${
                         isSelected
                           ? "bg-accent/10 text-accent"
                           : "text-foreground/70 hover:bg-foreground/5 hover:text-foreground"
@@ -165,7 +165,7 @@ export function TagFilterPopover({
                           type="checkbox"
                           checked={isSelected}
                           onChange={() => onToggleTag(tag)}
-                          className="sr-only"
+                          className="peer sr-only"
                         />
                         <span
                           aria-hidden="true"
