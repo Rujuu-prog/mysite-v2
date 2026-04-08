@@ -67,6 +67,8 @@ export function WorksSection() {
   const clearAll = useCallback(() => {
     setSelectedTags([]);
     setSearchQuery("");
+    setTagSearch("");
+    setIsPopoverOpen(false);
   }, []);
 
   // Focus tag search input when popover opens
