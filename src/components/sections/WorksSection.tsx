@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SectionHeading } from "@/components/atoms/SectionHeading";
+import { TwinklingStar } from "@/components/atoms/TwinklingStar";
 import { WorkCard } from "@/components/molecules/WorkCard";
 import { WorkModal } from "@/components/organisms/WorkModal";
 import { works } from "@/data/works";
@@ -300,17 +301,38 @@ export function WorksSection() {
         </AnimatePresence>
       </div>
 
-      {/* No results */}
+      {/* No results — empty sector */}
       <AnimatePresence>
         {filteredWorks.length === 0 && (
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="mt-12 text-center text-muted"
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mt-16 flex flex-col items-center gap-4"
           >
-            No works found
-          </motion.p>
+            {/* Twinkling stars — same style as card/modal stars */}
+            <div className="relative h-24 w-64">
+              <TwinklingStar />
+            </div>
+
+            <p className="text-sm text-foreground/60">
+              No stars found in this sector
+            </p>
+            <p className="text-caption text-muted">
+              検索条件に一致する作品が見つかりません
+            </p>
+
+            {(selectedTags.length > 0 || searchQuery) && (
+              <button
+                type="button"
+                onClick={clearAll}
+                className="mt-2 rounded border border-accent/30 px-4 py-1.5 text-sm text-accent transition-all duration-200 hover:border-accent hover:bg-accent/10 hover:[box-shadow:0_0_12px_rgba(88,152,185,0.15)]"
+              >
+                Clear filters
+              </button>
+            )}
+          </motion.div>
         )}
       </AnimatePresence>
 
