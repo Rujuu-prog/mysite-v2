@@ -18,6 +18,7 @@ export function WorksSection() {
   const popoverRef = useRef<HTMLDivElement>(null);
   const filterBtnRef = useRef<HTMLButtonElement>(null);
   const tagSearchRef = useRef<HTMLInputElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const allTagsWithCount = useMemo(() => {
     const tagCount = new Map<string, number>();
@@ -69,6 +70,7 @@ export function WorksSection() {
     setSearchQuery("");
     setTagSearch("");
     setIsPopoverOpen(false);
+    requestAnimationFrame(() => searchInputRef.current?.focus());
   }, []);
 
   // Focus tag search input when popover opens
@@ -121,6 +123,7 @@ export function WorksSection() {
             ✧
           </span>
           <input
+            ref={searchInputRef}
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -150,7 +153,7 @@ export function WorksSection() {
               setTagSearch("");
             }}
             aria-expanded={isPopoverOpen}
-            aria-haspopup="dialog"
+            aria-haspopup="listbox"
             aria-controls="tag-filter-popover"
             className={`flex items-center gap-1.5 rounded border px-3 py-2 text-sm transition-all duration-200 ${
               isPopoverOpen || selectedTags.length > 0
@@ -185,8 +188,9 @@ export function WorksSection() {
               <motion.div
                 ref={popoverRef}
                 id="tag-filter-popover"
-                role="dialog"
+                role="listbox"
                 aria-label="Tag filter"
+                aria-multiselectable="true"
                 initial={{ opacity: 0, y: -4, scale: 0.97 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -4, scale: 0.97 }}
@@ -219,8 +223,9 @@ export function WorksSection() {
                         <button
                           key={tag}
                           type="button"
+                          role="option"
                           onClick={() => toggleTag(tag)}
-                          aria-pressed={isSelected}
+                          aria-selected={isSelected}
                           className={`flex w-full items-center justify-between rounded px-2 py-1.5 text-sm transition-colors duration-100 ${
                             isSelected
                               ? "bg-accent/10 text-accent"
