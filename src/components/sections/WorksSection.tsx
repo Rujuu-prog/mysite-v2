@@ -68,7 +68,7 @@ export function WorksSection() {
     setSearchQuery("");
   }, []);
 
-  // Close popover on outside click
+  // Close popover on outside click or Escape key
   useEffect(() => {
     if (!isPopoverOpen) return;
     const handleClick = (e: MouseEvent) => {
@@ -80,10 +80,22 @@ export function WorksSection() {
       ) {
         setIsPopoverOpen(false);
         setTagSearch("");
+        filterBtnRef.current?.focus();
+      }
+    };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsPopoverOpen(false);
+        setTagSearch("");
+        filterBtnRef.current?.focus();
       }
     };
     document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [isPopoverOpen]);
 
   return (
@@ -104,6 +116,7 @@ export function WorksSection() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search works..."
+            aria-label="Search works"
             className="w-full rounded border border-border bg-transparent py-2 pl-8 pr-8 text-sm text-foreground placeholder:text-muted transition-[border-color,box-shadow] duration-300 focus:border-accent focus:outline-none focus:[box-shadow:0_0_20px_rgba(88,152,185,0.15)]"
           />
           {searchQuery && (
@@ -127,6 +140,8 @@ export function WorksSection() {
               setIsPopoverOpen((prev) => !prev);
               setTagSearch("");
             }}
+            aria-expanded={isPopoverOpen}
+            aria-controls="tag-filter-popover"
             className={`flex items-center gap-1.5 rounded border px-3 py-2 text-sm transition-all duration-200 ${
               isPopoverOpen || selectedTags.length > 0
                 ? "border-accent text-accent [box-shadow:0_0_12px_rgba(88,152,185,0.15)]"
@@ -159,6 +174,9 @@ export function WorksSection() {
             {isPopoverOpen && (
               <motion.div
                 ref={popoverRef}
+                id="tag-filter-popover"
+                role="dialog"
+                aria-label="Tag filter"
                 initial={{ opacity: 0, y: -4, scale: 0.97 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -4, scale: 0.97 }}
@@ -172,6 +190,7 @@ export function WorksSection() {
                     value={tagSearch}
                     onChange={(e) => setTagSearch(e.target.value)}
                     placeholder="Search tags..."
+                    aria-label="Search tags"
                     className="w-full rounded bg-transparent px-2 py-1.5 text-sm text-foreground placeholder:text-muted focus:outline-none"
                   />
                 </div>
@@ -190,6 +209,7 @@ export function WorksSection() {
                           key={tag}
                           type="button"
                           onClick={() => toggleTag(tag)}
+                          aria-pressed={isSelected}
                           className={`flex w-full items-center justify-between rounded px-2 py-1.5 text-sm transition-colors duration-100 ${
                             isSelected
                               ? "bg-accent/10 text-accent"
@@ -239,7 +259,7 @@ export function WorksSection() {
                       onClick={() => setSelectedTags([])}
                       className="w-full rounded px-2 py-1 text-caption text-muted transition-colors hover:text-foreground"
                     >
-                      Clear all filters
+                      Clear tag filters
                     </button>
                   </div>
                 )}
