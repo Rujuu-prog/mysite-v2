@@ -28,8 +28,9 @@ export function TagFilterPopover({
   const tagSearchRef = useRef<HTMLInputElement>(null);
 
   const filteredTags = useMemo(() => {
-    if (!tagSearch) return allTagsWithCount;
-    const q = tagSearch.toLowerCase();
+    const normalizedTagSearch = tagSearch.trim();
+    if (!normalizedTagSearch) return allTagsWithCount;
+    const q = normalizedTagSearch.toLowerCase();
     return allTagsWithCount.filter((t) => t.tag.toLowerCase().includes(q));
   }, [allTagsWithCount, tagSearch]);
 
@@ -82,7 +83,7 @@ export function TagFilterPopover({
           setTagSearch("");
         }}
         aria-expanded={isOpen}
-        aria-haspopup="true"
+        aria-haspopup="dialog"
         aria-controls="tag-filter-popover"
         className={`flex items-center gap-1.5 rounded border px-3 py-2 text-sm transition-all duration-200 ${
           isOpen || selectedTags.length > 0
@@ -139,7 +140,7 @@ export function TagFilterPopover({
             <div
               role="group"
               aria-label="Tag filters"
-              className="scrollbar-hide max-h-56 overflow-y-auto p-1"
+              className="scrollbar-cosmic max-h-56 overflow-y-auto p-1"
             >
               {filteredTags.length === 0 ? (
                 <p className="px-2 py-3 text-center text-caption text-muted">

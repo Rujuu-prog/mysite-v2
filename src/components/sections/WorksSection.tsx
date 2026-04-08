@@ -29,7 +29,7 @@ export function WorksSection() {
   }, [works]);
 
   const filteredWorks = useMemo(() => {
-    const q = searchQuery.toLowerCase();
+    const q = searchQuery.trim().toLowerCase();
     return works.filter((work) => {
       const matchesSearch =
         !q ||
