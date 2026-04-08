@@ -53,3 +53,11 @@ h3 {
   font-size: 13px;
   line-height: 1.5;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

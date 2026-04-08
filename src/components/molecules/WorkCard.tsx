@@ -1,9 +1,7 @@
 "use client";
 
-import { motion } from "motion/react";
 import Image from "next/image";
 import { Tag } from "@/components/atoms/Tag";
-import { slideUp } from "@/lib/animations";
 import type { Work } from "@/types";
 
 type Props = {
@@ -15,7 +13,7 @@ export function WorkCard({ work, onClick }: Props) {
   const hasDetail = !!work.detail;
 
   return (
-    <motion.div variants={slideUp}>
+    <div>
       <button
         type="button"
         onClick={hasDetail ? onClick : undefined}
@@ -57,6 +55,6 @@ export function WorkCard({ work, onClick }: Props) {
           )}
         </div>
       </button>
-    </motion.div>
+    </div>
   );
 }
