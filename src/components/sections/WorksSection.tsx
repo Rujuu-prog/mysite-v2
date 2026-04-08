@@ -17,6 +17,7 @@ export function WorksSection() {
   const [tagSearch, setTagSearch] = useState("");
   const popoverRef = useRef<HTMLDivElement>(null);
   const filterBtnRef = useRef<HTMLButtonElement>(null);
+  const tagSearchRef = useRef<HTMLInputElement>(null);
 
   const allTagsWithCount = useMemo(() => {
     const tagCount = new Map<string, number>();
@@ -37,8 +38,8 @@ export function WorksSection() {
   }, [allTagsWithCount, tagSearch]);
 
   const filteredWorks = useMemo(() => {
+    const q = searchQuery.toLowerCase();
     return works.filter((work) => {
-      const q = searchQuery.toLowerCase();
       const matchesSearch =
         !q ||
         work.title.toLowerCase().includes(q) ||
@@ -68,6 +69,13 @@ export function WorksSection() {
     setSearchQuery("");
   }, []);
 
+  // Focus tag search input when popover opens
+  useEffect(() => {
+    if (isPopoverOpen) {
+      requestAnimationFrame(() => tagSearchRef.current?.focus());
+    }
+  }, [isPopoverOpen]);
+
   // Close popover on outside click or Escape key
   useEffect(() => {
     if (!isPopoverOpen) return;
@@ -80,7 +88,6 @@ export function WorksSection() {
       ) {
         setIsPopoverOpen(false);
         setTagSearch("");
-        filterBtnRef.current?.focus();
       }
     };
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -141,6 +148,7 @@ export function WorksSection() {
               setTagSearch("");
             }}
             aria-expanded={isPopoverOpen}
+            aria-haspopup="dialog"
             aria-controls="tag-filter-popover"
             className={`flex items-center gap-1.5 rounded border px-3 py-2 text-sm transition-all duration-200 ${
               isPopoverOpen || selectedTags.length > 0
@@ -186,6 +194,7 @@ export function WorksSection() {
                 {/* Popover search */}
                 <div className="border-b border-border p-2">
                   <input
+                    ref={tagSearchRef}
                     type="text"
                     value={tagSearch}
                     onChange={(e) => setTagSearch(e.target.value)}
@@ -308,8 +317,9 @@ export function WorksSection() {
             <motion.div
               key={work.id}
               initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, filter: "blur(4px)" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
               <WorkCard

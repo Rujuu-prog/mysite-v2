@@ -13,48 +13,46 @@ export function WorkCard({ work, onClick }: Props) {
   const hasDetail = !!work.detail;
 
   return (
-    <div>
-      <button
-        type="button"
-        onClick={hasDetail ? onClick : undefined}
-        className={`group w-full text-left ${hasDetail ? "cursor-zoom-in" : "cursor-help"}`}
-        disabled={!hasDetail}
-      >
-        <div className="overflow-hidden rounded border border-border transition-colors duration-200 group-hover:border-accent">
-          <Image
-            src={work.thumbnail}
-            alt={work.title}
-            width={600}
-            height={400}
-            className={`aspect-[3/2] w-full object-cover transition-transform duration-300 ${hasDetail ? "group-hover:scale-105" : ""}`}
-          />
-        </div>
-        <div className="mt-3">
-          <h3
-            className={`text-foreground transition-colors duration-200 ${hasDetail ? "group-hover:text-accent" : ""}`}
-          >
-            {work.title}
-          </h3>
-          {work.period && (
-            <p className="mt-0.5 text-caption text-muted">{work.period}</p>
-          )}
-          {work.description && (
-            <p className="mt-1 text-caption text-muted">{work.description}</p>
-          )}
-          {work.tags.length > 0 && (
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {work.tags.map((tag) => (
-                <Tag key={tag} label={tag} />
-              ))}
-            </div>
-          )}
-          {hasDetail && (
-            <span className="mt-2 inline-block cursor-e-resize text-caption text-accent-strong opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-              View details →
-            </span>
-          )}
-        </div>
-      </button>
-    </div>
+    <button
+      type="button"
+      onClick={hasDetail ? onClick : undefined}
+      className={`group w-full text-left ${hasDetail ? "cursor-zoom-in" : "cursor-help"}`}
+      disabled={!hasDetail}
+    >
+      <div className="overflow-hidden rounded border border-border transition-colors duration-200 group-hover:border-accent">
+        <Image
+          src={work.thumbnail}
+          alt={work.title}
+          width={600}
+          height={400}
+          className={`aspect-[3/2] w-full object-cover transition-transform duration-300 ${hasDetail ? "group-hover:scale-105" : ""}`}
+        />
+      </div>
+      <div className="mt-3">
+        <h3
+          className={`text-foreground transition-colors duration-200 ${hasDetail ? "group-hover:text-accent" : ""}`}
+        >
+          {work.title}
+        </h3>
+        {work.period && (
+          <p className="mt-0.5 text-caption text-muted">{work.period}</p>
+        )}
+        {work.description && (
+          <p className="mt-1 text-caption text-muted">{work.description}</p>
+        )}
+        {work.tags.length > 0 && (
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {work.tags.map((tag) => (
+              <Tag key={tag} label={tag} />
+            ))}
+          </div>
+        )}
+        {hasDetail && (
+          <span className="mt-2 inline-block cursor-e-resize text-caption text-accent-strong opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+            View details →
+          </span>
+        )}
+      </div>
+    </button>
   );
 }
