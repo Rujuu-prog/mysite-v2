@@ -29,7 +29,7 @@ export function WorksSection() {
     return [...tagCount.entries()]
       .sort((a, b) => b[1] - a[1])
       .map(([tag, count]) => ({ tag, count }));
-  }, []);
+  }, [works]);
 
   const filteredTags = useMemo(() => {
     if (!tagSearch) return allTagsWithCount;
@@ -52,7 +52,7 @@ export function WorksSection() {
 
       return matchesSearch && matchesTags;
     });
-  }, [searchQuery, selectedTags]);
+  }, [searchQuery, selectedTags, works]);
 
   const toggleTag = useCallback((tag: string) => {
     setSelectedTags((prev) =>
