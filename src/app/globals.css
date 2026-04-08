@@ -53,3 +53,31 @@ h3 {
   font-size: 13px;
   line-height: 1.5;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-cosmic {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(88, 152, 185, 0.25) transparent;
+}
+.scrollbar-cosmic::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar-cosmic::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-cosmic::-webkit-scrollbar-thumb {
+  background: rgba(88, 152, 185, 0.2);
+  border-radius: 9999px;
+  transition: background 0.3s;
+}
+.scrollbar-cosmic:hover::-webkit-scrollbar-thumb {
+  background: rgba(88, 152, 185, 0.45);
+  box-shadow: 0 0 6px rgba(88, 152, 185, 0.3);
+}
